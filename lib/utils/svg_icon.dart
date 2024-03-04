@@ -13,7 +13,7 @@ class SvgIcon {
   static const filledHeart = "assets/icons/filled_heart.svg";
   static const moreCircle = "assets/icons/more_circle.svg";
   static String get appLogo => 'assets/images/logo-black-.svg';
-  static String get logo => 'assets/images/logo-black.png';
+  static String get logo => 'assets/images/logo-black-.svg';
   static String get home => 'assets/icons/home.svg';
   static String get category => 'assets/icons/category.svg';
   static String get wishlist => 'assets/icons/wishlist.svg';
