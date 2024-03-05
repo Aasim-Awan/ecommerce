@@ -1,6 +1,6 @@
 class ApiList {
-  static const baseUrl = "https://demo.shopking.dev";
-  static const licenseCode = "i9u99tt4-f0w6-71w7-8394-y968t02516r11";
+  static const baseUrl = "https://ecommerce.rubikkube.com";
+  static const licenseCode = "xxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxx";
   static const login = "$baseUrl/api/auth/login";
   static const forgotPassword = "$baseUrl/api/auth/forgot-password";
   static const resendForgotOTPPhone =
