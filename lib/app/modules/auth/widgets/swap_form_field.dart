@@ -25,23 +25,19 @@ class SwapFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final swapTitleController = Get.find<SwapTitleController>();
-    return CustomFormField(
+    return Obx(
+      () {
+        return swapTitleController.isShowEmailField.value
+            ? CustomPhoneFormField(
+                phoneController: phoneController,
+                validator: phoneValidator,
+                prefix: prefix,
+              )
+            : CustomFormField(
                 controller: emailController,
                 validator: emailValidator,
               );
-    // return Obx(
-    //   () {
-    //     return swapTitleController.isShowEmailField.value
-    //         ? CustomFormField(
-    //             controller: emailController,
-    //             validator: emailValidator,
-    //           )
-    //         : CustomPhoneFormField(
-    //             phoneController: phoneController,
-    //             validator: phoneValidator,
-    //             prefix: prefix,
-    //           );
-    //   },
-    // );
+      },
+    );
   }
 }

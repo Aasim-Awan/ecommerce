@@ -5,7 +5,17 @@ import '../config/theme/app_color.dart';
 
 class CustomFormField extends StatelessWidget {
   const CustomFormField(
-      {super.key, this.controller, this.validator, this.obsecure, this.keyboardType});
+      {super.key, this.controller, this.validator, this.obsecure, this.keyboardType,
+      this.phoneController,
+      this.emailController,
+      this.phoneValidator,
+      this.emailValidator});
+
+  final TextEditingController? phoneController;
+  final TextEditingController? emailController;
+
+  final String? Function(String?)? phoneValidator;
+  final String? Function(String?)? emailValidator;
 
   final TextEditingController? controller;
   final String? Function(String?)? validator;
