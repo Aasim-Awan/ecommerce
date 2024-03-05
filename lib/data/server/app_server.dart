@@ -24,6 +24,9 @@ class AppServer {
             "x-api-key": ApiList.licenseCode.toString(),
             'Authorization': token
           },
+           validateStatus: (_) => true,
+ contentType: Headers.jsonContentType,
+ responseType:ResponseType.json,
           ), queryParameters: queryParameters);
     } on DioException catch (e) {
       if (e.response != null) {
