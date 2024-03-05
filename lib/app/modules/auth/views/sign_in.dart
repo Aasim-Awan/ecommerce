@@ -46,18 +46,19 @@ class _SignInScreenState extends State<SignInScreen> {
   void initState() {
     super.initState();
     authController.getSetting();
-    authController.getCountryCode();
+    // authController.getCountryCode();
 
     emailController.text =
         box.read('email') == null ? '' : box.read('email').toString();
     passController.text =
         box.read('password') == null ? '' : box.read('password').toString();
-    phoneController.text =
-        box.read('phone') == null ? '' : box.read('phone').toString();
+    // phoneController.text =
+    //     box.read('phone') == null ? '' : box.read('phone').toString();
     if (box.read('email') != null ||
-        box.read('password') != null ||
-        box.read('country_code') != null ||
-        box.read('phone') != null) {
+        box.read('password') != null 
+        // box.read('country_code') != null ||
+        // box.read('phone') != null
+        ) {
       mark = true;
     } else {
       mark = false;
@@ -117,61 +118,61 @@ class _SignInScreenState extends State<SignInScreen> {
                                 emailController: emailController,
                                 emailValidator: (email) =>
                                     ValidationRules().email(email),
-                                phoneController: phoneController,
-                                prefix: Padding(
-                                  padding: EdgeInsets.only(left: 10.w),
-                                  child: PopupMenuButton(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(10.r),
-                                      ),
-                                    ),
-                                    position: PopupMenuPosition.under,
-                                    itemBuilder: (ctx) => List.generate(
-                                        authController
-                                            .countryCodeModel!.data!.length,
-                                        (index) => PopupMenuItem(
-                                              height: 32.h,
-                                              onTap: () async {
-                                                setState(() {
-                                                  authController.countryCode =
-                                                      authController
-                                                          .countryCodeModel!
-                                                          .data![index]
-                                                          .callingCode
-                                                          .toString();
-                                                });
-                                              },
-                                              child: Text(
-                                                authController.countryCodeModel!
-                                                    .data![index].callingCode
-                                                    .toString(),
-                                                style: GoogleFonts.urbanist(
-                                                    color: AppColor.textColor,
-                                                    fontWeight: FontWeight.w500,
-                                                    fontSize: 16.sp),
-                                              ),
-                                            )),
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          authController.countryCode,
-                                          style: GoogleFonts.urbanist(
-                                              color: AppColor.textColor,
-                                              fontSize: 16.sp,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                        SizedBox(
-                                          width: 5.w,
-                                        ),
-                                        SvgPicture.asset(SvgIcon.down)
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                phoneValidator: (phone) =>
-                                    ValidationRules().normal(phone),
-                              ),
+                                // phoneController: phoneController,
+                              //   prefix: Padding(
+                              //     padding: EdgeInsets.only(left: 10.w),
+                              //     // child: PopupMenuButton(
+                              //       shape: RoundedRectangleBorder(
+                              //         borderRadius: BorderRadius.all(
+                              //           Radius.circular(10.r),
+                              //         ),
+                              //       ),
+                              //       position: PopupMenuPosition.under,
+                              //       itemBuilder: (ctx) => List.generate(
+                              //           authController
+                              //               .countryCodeModel!.data!.length,
+                              //           (index) => PopupMenuItem(
+                              //                 height: 32.h,
+                              //                 onTap: () async {
+                              //                   setState(() {
+                              //                     authController.countryCode =
+                              //                         authController
+                              //                             .countryCodeModel!
+                              //                             .data![index]
+                              //                             .callingCode
+                              //                             .toString();
+                              //                   });
+                              //                 },
+                              //                 child: Text(
+                              //                   authController.countryCodeModel!
+                              //                       .data![index].callingCode
+                              //                       .toString(),
+                              //                   style: GoogleFonts.urbanist(
+                              //                       color: AppColor.textColor,
+                              //                       fontWeight: FontWeight.w500,
+                              //                       fontSize: 16.sp),
+                              //                 ),
+                              //               )),
+                              //       child: Row(
+                              //         children: [
+                              //           Text(
+                              //             authController.countryCode,
+                              //             style: GoogleFonts.urbanist(
+                              //                 color: AppColor.textColor,
+                              //                 fontSize: 16.sp,
+                              //                 fontWeight: FontWeight.w500),
+                              //           ),
+                              //           SizedBox(
+                              //             width: 5.w,
+                              //           ),
+                              //           SvgPicture.asset(SvgIcon.down)
+                              //         ],
+                              //       ),
+                              //     ),
+                              //   ),
+                              //   // phoneValidator: (phone) =>
+                              //   //     ValidationRules().normal(phone),
+                               ),
                               SizedBox(height: 20.h),
                               FormFieldTitle(title: "Password".tr),
                               SizedBox(height: 4.h),
