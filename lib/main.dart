@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(360, 800),
       builder: ((context, child) => GetMaterialApp(
-            title: 'ShopKing',
+            title: 'Lussoroman',
             debugShowCheckedModeBanner: false,
             translations: Languages(),
             locale: langValue,
