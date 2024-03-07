@@ -234,12 +234,12 @@ class AuthController extends GetxController {
         if (phoneVerification == '5') {
           Get.to(() => ForgetOTPScreen(
                 emailOrPhone: phone,
-                countryCode: countryCode,
+                // countryCode: countryCode,
               ));
         } else if (phoneVerification == '10') {
           Get.to(() => ResetPasswordScreen(
                 emailOrPhone: phone,
-                countryCode: country_code,
+                // countryCode: country_code,
               ));
         }
       } else {
@@ -276,7 +276,7 @@ class AuthController extends GetxController {
             AppColor.success);
         if (emailVerification == '5') {
           Get.to(() => OTPScreen(
-                emailOrPhone: email,
+                email: email,
               ));
         } else if (emailVerification == '10') {
           Get.to(() => const SignInScreen());
@@ -292,46 +292,46 @@ class AuthController extends GetxController {
     }
   }
 
-  registrationWithPhone(
-      {required String name,
-      required String phone,
-      required String countryCode,
-      required String password}) async {
-    isLoading(true);
-    try {
-      final response =
-          await AppServer().httpPost(endPoint: ApiList.register, body: {
-        "name": name,
-        "phone": phone,
-        "country_code": countryCode,
-        "password": password,
-      });
+  // registrationWithPhone(
+  //     {required String name,
+  //     required String phone,
+  //     required String countryCode,
+  //     required String password}) async {
+  //   isLoading(true);
+  //   try {
+  //     final response =
+  //         await AppServer().httpPost(endPoint: ApiList.register, body: {
+  //       "name": name,
+  //       "phone": phone,
+  //       "country_code": countryCode,
+  //       "password": password,
+  //     });
 
-      if (response.statusCode == 200) {
-        isLoading(false);
-        customSnackbar(
-            "SUCCESS".tr,
-            jsonDecode(response.body)["message"].toString().tr,
-            AppColor.success);
+  //     if (response.statusCode == 200) {
+  //       isLoading(false);
+  //       customSnackbar(
+  //           "SUCCESS".tr,
+  //           jsonDecode(response.body)["message"].toString().tr,
+  //           AppColor.success);
 
-        if (phoneVerification == '5') {
-          Get.to(() => OTPScreen(
-                emailOrPhone: phone,
-                countryCode: countryCode,
-              ));
-        } else if (phoneVerification == '10') {
-          Get.to(() => const SignInScreen());
-        }
-      } else {
-        isLoading(false);
-        customSnackbar("ERROR".tr,
-            jsonDecode(response.body)["message"].toString().tr, AppColor.error);
-      }
-    } catch (e) {
-      isLoading(false);
-      customSnackbar("ERROR".tr, e.toString(), AppColor.error);
-    }
-  }
+  //       if (phoneVerification == '5') {
+  //         Get.to(() => OTPScreen(
+  //               emailOrPhone: phone,
+  //               countryCode: countryCode,
+  //             ));
+  //       } else if (phoneVerification == '10') {
+  //         Get.to(() => const SignInScreen());
+  //       }
+  //     } else {
+  //       isLoading(false);
+  //       customSnackbar("ERROR".tr,
+  //           jsonDecode(response.body)["message"].toString().tr, AppColor.error);
+  //     }
+  //   } catch (e) {
+  //     isLoading(false);
+  //     customSnackbar("ERROR".tr, e.toString(), AppColor.error);
+  //   }
+  // }
 
   signInWithEmail({required String email, required String password}) async {
     isLoading(true);
