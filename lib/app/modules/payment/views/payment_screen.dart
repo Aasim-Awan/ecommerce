@@ -134,6 +134,12 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     SizedBox(
                       height: 24.h,
                     ),
+                    Container(
+                    child: Image.asset("assets/images/cardpicture.png"),
+                  ),
+                  SizedBox(
+                    height: 24.h,
+                  ),
                     InkWell(
                       onTap: () {
                         openCoupon();

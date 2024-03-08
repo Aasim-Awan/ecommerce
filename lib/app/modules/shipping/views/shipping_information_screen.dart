@@ -113,168 +113,168 @@ class _ShippingInformationScreenState extends State<ShippingInformationScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    height: 32.h,
-                    width: 161.w,
-                    decoration: BoxDecoration(
-                        color: AppColor.selectDeliveyColor,
-                        borderRadius: BorderRadius.circular(20.r)),
+                  // Container(
+                  //   height: 32.h,
+                  //   width: 161.w,
+                  //   decoration: BoxDecoration(
+                  //       color: AppColor.selectDeliveyColor,
+                  //       borderRadius: BorderRadius.circular(20.r)),
           
-                    child: Center(
-                      child: Row(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                isDelivery = true;
-                              });
-                            },
-                            child: Container(
-                              height: 32.h,
-                              width: 83.w,
-                              decoration: BoxDecoration(
-                                  color: isDelivery
-                                      ? AppColor.deliveryColor
-                                      : AppColor.selectDeliveyColor,
-                                  borderRadius: BorderRadius.circular(20.r)),
-                              child: Center(
-                                child: TextWidget(
-                                  text: 'Delivery'.tr,
-                                  color: isDelivery
-                                      ? AppColor.whiteColor
-                                      : AppColor.deliveryColor,
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: () {          
-                              setState(() {
-                                isDelivery = false;
-                              });
-                            },
-                            child: Container(
-                              height: 32.h,
-                              width: 78.w,
-                              decoration: BoxDecoration(
-                                  color: isDelivery
-                                      ? AppColor.selectDeliveyColor
-                                      : AppColor.deliveryColor,
-                                  borderRadius: BorderRadius.circular(20.r)),
-                              child: Center(
-                                child: TextWidget(
-                                  text: 'Pick Up'.tr,
-                                  color: isDelivery
-                                      ? AppColor.deliveryColor
-                                      : AppColor.whiteColor,
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                  //   child: Center(
+                  //     child: Row(
+                  //       children: [
+                  //         GestureDetector(
+                  //           onTap: () {
+                  //             setState(() {
+                  //               isDelivery = true;
+                  //             });
+                  //           },
+                  //           child: Container(
+                  //             height: 32.h,
+                  //             width: 83.w,
+                  //             decoration: BoxDecoration(
+                  //                 color: isDelivery
+                  //                     ? AppColor.deliveryColor
+                  //                     : AppColor.selectDeliveyColor,
+                  //                 borderRadius: BorderRadius.circular(20.r)),
+                  //             child: Center(
+                  //               child: TextWidget(
+                  //                 text: 'Delivery'.tr,
+                  //                 color: isDelivery
+                  //                     ? AppColor.whiteColor
+                  //                     : AppColor.deliveryColor,
+                  //                 fontSize: 14.sp,
+                  //                 fontWeight: FontWeight.w600,
+                  //               ),
+                  //             ),
+                  //           ),
+                  //         ),
+                  //         GestureDetector(
+                  //           onTap: () {          
+                  //             setState(() {
+                  //               isDelivery = false;
+                  //             });
+                  //           },
+                  //           child: Container(
+                  //             height: 32.h,
+                  //             width: 78.w,
+                  //             decoration: BoxDecoration(
+                  //                 color: isDelivery
+                  //                     ? AppColor.selectDeliveyColor
+                  //                     : AppColor.deliveryColor,
+                  //                 borderRadius: BorderRadius.circular(20.r)),
+                  //             child: Center(
+                  //               child: TextWidget(
+                  //                 text: 'Pick Up'.tr,
+                  //                 color: isDelivery
+                  //                     ? AppColor.deliveryColor
+                  //                     : AppColor.whiteColor,
+                  //                 fontSize: 14.sp,
+                  //                 fontWeight: FontWeight.w600,
+                  //               ),
+                  //             ),
+                  //           ),
+                  //         )
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
           
-                  SizedBox(
-                    height: 30.h,
-                  ),
-                  isDelivery == false
-                      ? Obx(
-                          () => showAddressController.outlestModel.value.data ==
-                                  null
-                              ? const SizedBox()
-                              : GestureDetector(
-                                  onTap: () {
-                                    showAddressController.selectedPickUp.value =
-                                        !showAddressController
-                                            .selectedPickUp.value;
-                                  },
-                                  child: ListView.builder(
-                                    shrinkWrap: true,
-                                    physics:
-                                          const NeverScrollableScrollPhysics(),
-                                    itemCount: showAddressController
-                                        .outlestModel.value.data!.length,
-                                    itemBuilder: (context, index) {
-                                      final outlet = showAddressController
-                                          .outlestModel.value.data![index];
-                                      return Padding(
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 4.h),
-                                        child: GestureDetector(
-                                          onTap: () {
-                                            showAddressController
-                                                .setoutletIndex(index);
-                                          },
-                                          child: Obx(
-                                            () => Container(
-                                              width: double.infinity,
-                                              decoration: BoxDecoration(
-                                                color: showAddressController
-                                                            .selectedOutletIndex
-                                                            .value ==
-                                                        index
-                                                    ? AppColor.primaryColor1
-                                                    : AppColor.addressColor,
-                                                border: Border.all(
-                                                    color: showAddressController
-                                                                .selectedOutletIndex
-                                                                .value ==
-                                                            index
-                                                        ? AppColor.primaryColor
-                                                        : Colors.transparent,
-                                                    width: 1.r),
-                                                borderRadius:
-                                                    BorderRadius.circular(12.r),
-                                              ),
-                                              child: Padding(
-                                                padding: EdgeInsets.all(12.r),
-                                                child: Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.start,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    SvgPicture.asset(
-                                                      showAddressController
-                                                                  .selectedOutletIndex
-                                                                  .value ==
-                                                              index
-                                                          ? SvgIcon.radioActive
-                                                          : SvgIcon.radio,
-                                                      height: 16.h,
-                                                      width: 16.w,
-                                                    ),
-                                                    SizedBox(width: 16.w),
-                                                    AddressCard(
-                                                        fullName: outlet.name ??
-                                                            "",
-                                                        phone: outlet.phone ??
-                                                            "",
-                                                        email: outlet.email ??
-                                                            "",
-                                                        streetAddress: outlet
-                                                                .address ??
-                                                            "",
-                                                        state: outlet.state ??
-                                                            ""),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                ),
-                        )
-                      :
+                  // SizedBox(
+                  //   height: 30.h,
+                  // ),
+                  // isDelivery == false
+                  //     ? Obx(
+                  //         () => showAddressController.outlestModel.value.data ==
+                  //                 null
+                  //             ? const SizedBox()
+                  //             : GestureDetector(
+                  //                 onTap: () {
+                  //                   showAddressController.selectedPickUp.value =
+                  //                       !showAddressController
+                  //                           .selectedPickUp.value;
+                  //                 },
+                  //                 child: ListView.builder(
+                  //                   shrinkWrap: true,
+                  //                   physics:
+                  //                         const NeverScrollableScrollPhysics(),
+                  //                   itemCount: showAddressController
+                  //                       .outlestModel.value.data!.length,
+                  //                   itemBuilder: (context, index) {
+                  //                     final outlet = showAddressController
+                  //                         .outlestModel.value.data![index];
+                  //                     return Padding(
+                  //                       padding:
+                  //                           EdgeInsets.symmetric(vertical: 4.h),
+                  //                       child: GestureDetector(
+                  //                         onTap: () {
+                  //                           showAddressController
+                  //                               .setoutletIndex(index);
+                  //                         },
+                  //                         child: Obx(
+                  //                           () => Container(
+                  //                             width: double.infinity,
+                  //                             decoration: BoxDecoration(
+                  //                               color: showAddressController
+                  //                                           .selectedOutletIndex
+                  //                                           .value ==
+                  //                                       index
+                  //                                   ? AppColor.primaryColor1
+                  //                                   : AppColor.addressColor,
+                  //                               border: Border.all(
+                  //                                   color: showAddressController
+                  //                                               .selectedOutletIndex
+                  //                                               .value ==
+                  //                                           index
+                  //                                       ? AppColor.primaryColor
+                  //                                       : Colors.transparent,
+                  //                                   width: 1.r),
+                  //                               borderRadius:
+                  //                                   BorderRadius.circular(12.r),
+                  //                             ),
+                  //                             child: Padding(
+                  //                               padding: EdgeInsets.all(12.r),
+                  //                               child: Row(
+                  //                                 mainAxisAlignment:
+                  //                                     MainAxisAlignment.start,
+                  //                                 crossAxisAlignment:
+                  //                                     CrossAxisAlignment.start,
+                  //                                 children: [
+                  //                                   SvgPicture.asset(
+                  //                                     showAddressController
+                  //                                                 .selectedOutletIndex
+                  //                                                 .value ==
+                  //                                             index
+                  //                                         ? SvgIcon.radioActive
+                  //                                         : SvgIcon.radio,
+                  //                                     height: 16.h,
+                  //                                     width: 16.w,
+                  //                                   ),
+                  //                                   SizedBox(width: 16.w),
+                  //                                   AddressCard(
+                  //                                       fullName: outlet.name ??
+                  //                                           "",
+                  //                                       phone: outlet.phone ??
+                  //                                           "",
+                  //                                       email: outlet.email ??
+                  //                                           "",
+                  //                                       streetAddress: outlet
+                  //                                               .address ??
+                  //                                           "",
+                  //                                       state: outlet.state ??
+                  //                                           ""),
+                  //                                 ],
+                  //                               ),
+                  //                             ),
+                  //                           ),
+                  //                         ),
+                  //                       ),
+                  //                     );
+                  //                   },
+                  //                 ),
+                  //               ),
+                  //       )
+                  //     :
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -611,12 +611,7 @@ class _ShippingInformationScreenState extends State<ShippingInformationScreen> {
                   SizedBox(
                     height: 24.h,
                   ),
-                  Container(
-                    child: Image.asset("assets/images/cardpicture.png"),
-                  ),
-                  SizedBox(
-                    height: 24.h,
-                  ),
+                  
                   InkWell(
                     onTap: () {
                       openCoupon();
