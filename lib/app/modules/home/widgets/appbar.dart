@@ -23,19 +23,20 @@ class AppBarWidget extends StatelessWidget {
       backgroundColor: AppColor.primaryBackgroundColor,
       elevation: 0,
       toolbarHeight: 48.h,
-      leadingWidth: 180.w,
+      leadingWidth: 100.w,
       leading: Padding(
         padding: EdgeInsets.only(left: 16.w, right: 16.w),
         child: Image.asset(
-          "assets/images/logo-black.png",
+          "assets/images/LUSSOROMAN_logo.png",
           height: 20.h,
           width: 73.w,
         ),
       ),
       title: Text(
-        title ?? "",
+        title ?? "Lussoro Man",
+        textAlign: TextAlign.center,
         style: TextStyle(
-          fontSize: 18.sp,
+          fontSize: 20.sp,
           fontWeight: FontWeight.w700,
           color: AppColor.textColor,
         ),

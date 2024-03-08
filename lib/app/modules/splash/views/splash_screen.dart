@@ -15,7 +15,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 10), () {
       Get.offNamed(Routes.navBarView);
     });
     return AnnotatedRegion<SystemUiOverlayStyle>(
@@ -31,7 +31,7 @@ class SplashScreen extends StatelessWidget {
         body: Center(
           child: SvgPicture.asset(
             SvgIcon.logo,
-            height: 50.h,
+            height: 200.h,
           ),
         ),
       ),

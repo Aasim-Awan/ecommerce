@@ -1,4 +1,4 @@
-package com.inilabs.shopking
+package com.example.bundleId
 
 import io.flutter.embedding.android.FlutterActivity
 
