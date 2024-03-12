@@ -1,5 +1,5 @@
 class ApiList {
-  static const baseUrl = "https://ecommerce.rubikkube.com";
+  static const baseUrl = "https://ecommerce.luminariontech.com";
   static const licenseCode = "xxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxx";
   static const login = "$baseUrl/api/auth/login";
   static const forgotPassword = "$baseUrl/api/auth/forgot-password";

@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:308737311204:android:965ddad00da4bad01bc7f1",
         "android_client_info": {
-          "package_name": "com.inilabs.shopking"
+          "package_name": "com.example.bundleId"
         }
       },
       "oauth_client": [],

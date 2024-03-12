@@ -63,6 +63,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '308737311204',
     projectId: 'shopperz-fe4ea',
     storageBucket: 'shopperz-fe4ea.appspot.com',
-    iosBundleId: 'com.inilabs.shopking',
+    iosBundleId: 'com.example.bundleId',
   );
 }

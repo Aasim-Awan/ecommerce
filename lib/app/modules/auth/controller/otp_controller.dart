@@ -94,7 +94,7 @@ class OTPController extends GetxController {
         isLoading(false);
         customSnackbar("SUCCESS".tr,
             jsonDecode(resonse.body)["message"].toString().tr, AppColor.success);
-        Get.to(() => ResetPasswordScreen());
+        Get.to(() => ResetPasswordScreen(emailOrPhone: '',));
       } else {
         isLoading(false);
         customSnackbar("ERROR".tr,
@@ -123,7 +123,7 @@ class OTPController extends GetxController {
         isLoading(false);
         customSnackbar("SUCCESS".tr,
             jsonDecode(resonse.body)["message"].toString().tr, AppColor.success);
-        Get.to(() => ResetPasswordScreen());
+        Get.to(() => ResetPasswordScreen(emailOrPhone: "",));
       } else {
         isLoading(false);
         customSnackbar("ERROR".tr,
