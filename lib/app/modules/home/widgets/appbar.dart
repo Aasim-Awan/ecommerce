@@ -23,7 +23,7 @@ class AppBarWidget extends StatelessWidget {
       backgroundColor: AppColor.primaryBackgroundColor,
       elevation: 0,
       toolbarHeight: 48.h,
-      leadingWidth: 100.w,
+      leadingWidth: 90.w,
       leading: Padding(
         padding: EdgeInsets.only(left: 16.w, right: 16.w),
         child: Image.asset(
