@@ -7,25 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:44078523722:android:790d775b657af8b47ecdb3",
-        "android_client_info": {
-          "package_name": "com.example.bundleId"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDndjBPJRi5b_gQ6o4Lf2giweXRkVmkTms"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:44078523722:android:3ea0fc739ce4cf167ecdb3",
         "android_client_info": {
           "package_name": "com.example.lussoroman"
