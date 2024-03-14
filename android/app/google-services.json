@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "44078523722",
-    "project_id": "lussoro-man",
-    "storage_bucket": "lussoro-man.appspot.com"
+    "project_number": "684766962200",
+    "project_id": "lussoro-man-f0138",
+    "storage_bucket": "lussoro-man-f0138.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:44078523722:android:790d775b657af8b47ecdb3",
+        "mobilesdk_app_id": "1:684766962200:android:c01deaf42299cbfde0196d",
         "android_client_info": {
           "package_name": "com.example.bundleId"
         }
@@ -15,26 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDndjBPJRi5b_gQ6o4Lf2giweXRkVmkTms"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:44078523722:android:3ea0fc739ce4cf167ecdb3",
-        "android_client_info": {
-          "package_name": "com.example.lussoroman"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDndjBPJRi5b_gQ6o4Lf2giweXRkVmkTms"
+          "current_key": "AIzaSyD9ZilyJGAnVANLNTUWdTkdZXvOM9PSHqA"
         }
       ],
       "services": {

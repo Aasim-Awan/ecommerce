@@ -50,19 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDndjBPJRi5b_gQ6o4Lf2giweXRkVmkTms',
-    appId: '1:44078523722:android:790d775b657af8b47ecdb3',
-    messagingSenderId: '44078523722',
-    projectId: 'lussoro-man',
-    storageBucket: 'lussoro-man.appspot.com',
+    apiKey: 'AIzaSyD9ZilyJGAnVANLNTUWdTkdZXvOM9PSHqA',
+    appId: '1:684766962200:android:c01deaf42299cbfde0196d',
+    messagingSenderId: '684766962200',
+    projectId: 'lussoro-man-f0138',
+    storageBucket: 'lussoro-man-f0138.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDurC0VmT8ynDabF08D-Nx8uJvORYS1AQw',
-    appId: '1:44078523722:ios:bf084d40af79fac37ecdb3',
-    messagingSenderId: '44078523722',
-    projectId: 'lussoro-man',
-    storageBucket: 'lussoro-man.appspot.com',
+    apiKey: 'AIzaSyA6v9xMlSLN32djod-SYsd7WIdlchfp8eM',
+    appId: '1:684766962200:ios:99750737f1ef1ba0e0196d',
+    messagingSenderId: '684766962200',
+    projectId: 'lussoro-man-f0138',
+    storageBucket: 'lussoro-man-f0138.appspot.com',
     iosBundleId: 'com.example.bundleId',
   );
 }
